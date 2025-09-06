@@ -36,10 +36,44 @@ $$
 
 ---
 
+### ✅ 高级示例
+
+#### 多行公式对齐
+使用 `aligned` 环境进行多行公式的对齐显示：
+
+```markdown
+$$
+\begin{aligned}
+f(x) &= (x+a)(x+b) \\
+     &= x^2 + (a+b)x + ab
+\end{aligned}
+$$
+```
+
+#### 在公式中插入文字
+使用 `\text{...}` 在公式中添加文字说明：
+
+```markdown
+$$
+f(x) = x^2 \quad \text{其中 } x \ge 0
+$$
+```
+
+#### 常用数学字体
+特殊数学符号的字体表示：
+
+```markdown
+- 向量（粗体）：`$\mathbf{v}$`  显示为 $\mathbf{v}$
+- 集合（空心体）：`$\mathbb{R}$` 显示为 $\mathbb{R}$ (代表实数集)
+```
+
+---
+
 ### ⚠️ 注意事项
 - 所有公式必须使用 **美元符号** 包裹，**不支持**标准 LaTeX 的 `\(...\)` 或 `\[...\]` 格式；
+- 若需要输入普通的美元符号（如价格），请使用反斜杠 `\` 进行转义：`\$50` 会显示为 $50；
 - 若从 GPT 或其他工具复制公式，建议使用插件如 [Transfer LaTeX from GPT](https://github.com/xixia123/obsidian-transfer-latex-from-gpt) 自动转换格式；
-- 若频繁输入公式，可安装 [Latex Suite 插件](https://zhuanlan.zhihu.com/p/1931395948728259558)，支持快捷键和自动补全。
+- 若频繁输入公式，可安装 [Latex Suite 插件](https://zhuanlan.zhihu.com/p/1931395948728259558)，支持快捷键和自动补全（如输入 `frac` 按 `Tab` 键自动生成 `\frac{}{}`）。
 
 ---
 
