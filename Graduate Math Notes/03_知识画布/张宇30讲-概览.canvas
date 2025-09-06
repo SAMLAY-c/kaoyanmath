@@ -1,0 +1,150 @@
+{
+  "nodes": [
+    {
+      "id": "lecture-overview",
+      "type": "text",
+      "text": "# 张宇30讲\n\n## 基础部分 (00_Foundation)\n- 00-01: 引言\n- 00-02: 基础知识结构\n- 00-03: 基础逻辑\n- 00-04: 表达式概念与运算\n- 00-05: 方程与不等式\n- 00-06: 函数\n- 00-07: 数列与单调性\n- 00-08: 坐标系与变换\n\n## 正式课程 (01-05)\n- 01: 函数极限与连续性\n- 02: 数列极限\n- 03: 单变量微分学概念\n- 04: 单变量微分学计算\n- 05: 单变量微分学应用",
+      "x": 400,
+      "y": 50,
+      "width": 400,
+      "height": 300,
+      "color": "1"
+    },
+    {
+      "id": "foundation-section",
+      "type": "text",
+      "text": "## 基础部分\n\n8讲内容，建立数学基础\n\n**重点：**\n- 函数概念\n- 表达式运算\n- 坐标系变换\n- 基础逻辑\n\n**状态：** 待处理",
+      "x": 100,
+      "y": 400,
+      "width": 250,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "formal-course",
+      "type": "text",
+      "text": "## 正式课程\n\n16讲内容，核心考研数学\n\n**重点：**\n- 极限理论\n- 微分学\n- 积分学\n- 应用问题\n\n**状态：** 部分处理",
+      "x": 700,
+      "y": 400,
+      "width": 250,
+      "height": 200,
+      "color": "3"
+    },
+    {
+      "id": "current-progress",
+      "type": "text",
+      "text": "## 当前进度\n\n**已完成：**\n- 01-04: 函数极限与性质\n\n**进行中：**\n- Canvas文件创建\n- 原子笔记整理\n\n**下一步：**\n- 完善原子笔记\n- 创建更多Canvas",
+      "x": 400,
+      "y": 450,
+      "width": 300,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "study-resources",
+      "type": "file",
+      "file": "02_Atomic_Notes/Calculus/01-04-1-Derivative_Definition.md",
+      "x": 50,
+      "y": 650,
+      "width": 200,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "formula-resources",
+      "type": "file",
+      "file": "02_Atomic_Notes/Formulas/01-04-2-Common_Derivative_Formulas.md",
+      "x": 300,
+      "y": 650,
+      "width": 200,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "canvas-examples",
+      "type": "file",
+      "file": "03_Canvas/01-04-Function_Limits_and_Properties.canvas",
+      "x": 550,
+      "y": 650,
+      "width": 200,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "tracking-system",
+      "type": "file",
+      "file": "CLAUDE.md",
+      "x": 800,
+      "y": 650,
+      "width": 200,
+      "height": 120,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "lecture-overview",
+      "fromSide": "left",
+      "toNode": "foundation-section",
+      "toSide": "top",
+      "label": "基础内容"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "lecture-overview",
+      "fromSide": "right",
+      "toNode": "formal-course",
+      "toSide": "top",
+      "label": "核心课程"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "foundation-section",
+      "fromSide": "right",
+      "toNode": "current-progress",
+      "toSide": "left",
+      "label": "待处理"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "formal-course",
+      "fromSide": "left",
+      "toNode": "current-progress",
+      "toSide": "right",
+      "label": "进行中"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "current-progress",
+      "fromSide": "bottom",
+      "toNode": "study-resources",
+      "toSide": "top",
+      "label": "学习资源"
+    },
+    {
+      "id": "edge-6",
+      "fromNode": "study-resources",
+      "fromSide": "right",
+      "toNode": "formula-resources",
+      "toSide": "left",
+      "label": "相关资料"
+    },
+    {
+      "id": "edge-7",
+      "fromNode": "formula-resources",
+      "fromSide": "right",
+      "toNode": "canvas-examples",
+      "toSide": "left",
+      "label": "可视化"
+    },
+    {
+      "id": "edge-8",
+      "fromNode": "canvas-examples",
+      "fromSide": "right",
+      "toNode": "tracking-system",
+      "toSide": "left",
+      "label": "进度跟踪"
+    }
+  ]
+}

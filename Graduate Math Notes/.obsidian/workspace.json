@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "10002376744da119",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f1d5418ee15c8e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58f0d531da18bdd5",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "03_知识画布/Canvas_01_04_函数极限与性质-增强版.canvas",
+                "viewState": {
+                  "x": 329.06398498030035,
+                  "y": 387.0359003388214,
+                  "zoom": -0.8660075391679452
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Canvas_01_04_函数极限与性质-增强版"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cb1c772e42c9df14",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf62c8a59e1f2bef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c51efb280d5ce5b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b6465fa6fc3259c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "94b66af32c0f6cae",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "413938845dff7ce7",
+    "type": "split",
+    "children": [
+      {
+        "id": "00314055c61886a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "137c93d8cd70aa19",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02_Atomic_Notes/公式/01-04-2-导数基本公式.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 01-04-2-导数基本公式"
+            }
+          },
+          {
+            "id": "cd0cd7d480c11d44",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02_Atomic_Notes/公式/01-04-2-导数基本公式.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 01-04-2-导数基本公式"
+            }
+          },
+          {
+            "id": "b02a79ec06325c49",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1d66828c4094d11a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02_Atomic_Notes/公式/01-04-2-导数基本公式.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 01-04-2-导数基本公式"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "58f0d531da18bdd5",
+  "lastOpenFiles": [
+    " obsidian公式.md",
+    " obsidian公式.MD",
+    "canvas参考文件.md",
+    "CLAUDE.md",
+    "03_知识画布/01-04-Function_Limits_and_Properties.canvas",
+    "03_知识画布/Canvas_01_04_函数极限与性质-增强版.canvas.tmp.3037.1757141146540",
+    "03_知识画布/Canvas_01_04_函数极限与性质-增强版.canvas",
+    "03_知识画布/Canvas_01_04_函数极限与性质.md",
+    "02_Atomic_Notes/高等数学/01-04-1-导数定义.md",
+    "05_学习日记/模板-每日学习记录.md",
+    "系统整合指南.md",
+    "05_学习日记/集成学习记录-模板.md",
+    "02_Atomic_Notes/高等数学/01-04-1-导数定义.md.tmp.3037.1757140870806",
+    "00_Templates/原子笔记模板-优化版.md",
+    "01_主题索引/01-04-函数极限与性质-MOC.md",
+    "05_学习日记/复习追踪系统.md",
+    "05_学习日记/2024-09-06-学习记录.md",
+    "05_学习日记/Tasks任务管理.md",
+    "05_学习日记/模板-每日学习记录.md.tmp.3037.1757140612216",
+    "05_学习日记/模板-每日学习记录.md.tmp.3037.1757140608762",
+    "05_学习日记/Tasks任务管理.md.tmp.3037.1757140600875",
+    "05_学习日记/复习追踪系统.md.tmp.3037.1757140591556",
+    "05_学习日记/学习统计仪表板.md",
+    "05_学习日记/使用说明.md",
+    "05_学习日记/学习统计仪表板.md.tmp.3037.1757140581600",
+    "05_学习日记/模板-每日学习记录.md.tmp.3037.1757140548881",
+    "05_学习日记/模板-每日学习记录.md.tmp.3037.1757140545461",
+    "05_学习日记/模板-每日学习记录.md.tmp.3037.1757140538473",
+    "02_Atomic_Notes/高等数学/01-04-7-高级极限问题.md",
+    "02_Atomic_Notes/高等数学/01-04-6-基本极限计算.md",
+    "02_Atomic_Notes/高等数学/01-04-9-因式分解法.md",
+    "02_Atomic_Notes/高等数学/01-04-8-直接代入法.md",
+    "02_Atomic_Notes/高等数学/01-04-5-极限运算法则.md",
+    "02_Atomic_Notes/高等数学/01-04-4-ε-δ定义.md",
+    "02_Atomic_Notes/高等数学/01-04-3-极限存在准则.md",
+    "学习跟踪.md",
+    "01_主题索引/张宇30讲-主索引.md",
+    "00_Templates/Daily_Note_Template.md",
+    "03_知识画布/张宇30讲-概览.canvas",
+    "03_Canvas/01-04-Function_Limits_and_Properties.canvas",
+    "03_知识画布/Zhang_Yu_30_Lectures_Overview.canvas",
+    "03_Canvas/Zhang_Yu_30_Lectures_Overview.canvas"
+  ]
+}

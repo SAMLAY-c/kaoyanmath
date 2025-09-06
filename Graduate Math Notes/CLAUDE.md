@@ -1,243 +1,233 @@
-# Zhang Yu 30 Lectures Course Content Tracking System
+# CLAUDE.md
 
-## 📋 Course Content Record
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-### Foundation Section (00_Foundation)
-| Lecture | Topic | Status | Atomic Notes | Canvas File | Processing Date |
-|---------|-------|--------|--------------|-------------|-----------------|
-| 00-01 | Introduction | ⏳ | 0 | - | - |
-| 00-02 | Basic Knowledge Structure | ⏳ | 0 | - | - |
-| 00-03 | Basic Logic | ⏳ | 0 | - | - |
-| 00-04 | Expression Concepts and Operations | ⏳ | 0 | - | - |
-| 00-05 | Equations and Inequalities | ⏳ | 0 | - | - |
-| 00-06 | Functions | ⏳ | 0 | - | - |
-| 00-07 | Sequences and Monotonicity | ⏳ | 0 | - | - |
-| 00-08 | Coordinate Systems and Transformations | ⏳ | 0 | - | - |
+## Obsidian-Based Graduate Math Learning System
 
-### Formal Course (01-05)
-| Lecture | Topic | Status | Atomic Notes | Canvas File | Processing Date |
-|---------|-------|--------|--------------|-------------|-----------------|
-| 01-01 | Function Limits and Continuity - Basic Knowledge Structure | ⏳ | 0 | - | - |
-| 01-02 | Function Concepts and Properties | ⏳ | 0 | - | - |
-| 01-03 | Function Graphs | ⏳ | 0 | - | - |
-| 01-04 | Function Limit Concepts and Properties | ⏳ | 0 | - | - |
-| 01-05 | Limit Calculations | ⏳ | 0 | - | - |
-| 01-06 | Function Continuity and Discontinuity | ⏳ | 0 | - | - |
-| 01-07 | Notes | ⏳ | 0 | - | - |
-| 02-01 | Sequence Limits - Basic Knowledge Framework | ⏳ | 0 | - | - |
-| 02-02 | Sequence Limits - Basic Content Detailed | ⏳ | 0 | - | - |
-| 03-01 | Single Variable Differential Calculus Concepts - Basic Knowledge Structure | ⏳ | 0 | - | - |
-| 03-02 | Single Variable Differential Calculus Concepts - Basic Content Detailed | ⏳ | 0 | - | - |
-| 04-01 | Single Variable Differential Calculus Calculations - Basic Knowledge Structure | ⏳ | 0 | - | - |
-| 04-02 | Single Variable Differential Calculus Calculations - Basic Content Detailed | ⏳ | 0 | - | - |
-| 05-01 | Single Variable Differential Calculus Applications - Basic Knowledge Structure | ⏳ | 0 | - | - |
-| 05-02 | Single Variable Differential Calculus Applications - Basic Content Detailed | ⏳ | 0 | - | - |
+This is a sophisticated Obsidian-based knowledge management system for graduate-level mathematics learning, specifically designed for Zhang Yu's 30-lecture course. The system leverages Obsidian's core features: atomic notes, Canvas visualization, and bidirectional linking.
 
-## 🔢 Atomic Note Numbering System
+### System Architecture
 
-### Numbering Rules
-- **Format**: `[Chapter]-[Lecture]-[Sequence]`
-- **Example**: `01-04-1` (Chapter 1 - Lecture 4 - First atomic note)
-- **Prefix**: All atomic note filenames start with this number
+The system is organized into six main directories:
 
-### Created Atomic Notes
-| Number | Note Title | Created Date | Link |
-|--------|------------|--------------|------|
-| 01-04-1 | Derivative Definition | 2024-09-06 | [[01-04-1-Derivative Definition]] |
-| 01-04-2 | Common Derivative Formulas | 2024-09-06 | [[01-04-2-Common Derivative Formulas]] |
+- **00_Templates/** - Standardized templates for consistent note creation
+- **01_主题索引/** - Map of Content (MOC) files for knowledge navigation
+- **02_Atomic_Notes/** - Individual concept notes with rich metadata
+- **03_知识画布/** - Canvas files for visual knowledge graphs
+- **05_学习日记/** - Daily learning records and statistics dashboards
+- **06_复习回顾/** - Review and reflection materials
 
-## 🎨 Canvas File System
+### Core Components
 
-### File Naming Rules
-- **Format**: `Canvas_[Chapter]_[Lecture]_[Topic].md`
-- **Location**: `03_Canvas/` directory
-- **Example**: `Canvas_01_04_Function_Limits_and_Properties.md`
+#### Atomic Notes System
+Each note follows a strict YAML frontmatter schema with:
+- Standardized metadata: `note_id`, `chapter`, `lecture`, `topic`, `difficulty`
+- Learning tracking: `mastery_level`, `review_count`, `study_time`
+- Automated bidirectional connections using Dataview queries
+- Structured content: core concepts, detailed analysis, examples, exercises
 
-### Canvas Structure Template
-```markdown
-# 🎨 Canvas: [Lecture Topic]
+#### Canvas Knowledge Graphs
+JSON-based visualizations with:
+- Grouped nodes by concept type (core concepts, theoretical foundation, calculation methods)
+- Color-coded connections indicating relationship types
+- File nodes linking to atomic notes for interactive exploration
+- Hierarchical layout showing knowledge dependencies
 
-## 📋 Knowledge Points List
-1. **Knowledge Point 1**: [[01-04-1-Related Atomic Note]]
-2. **Knowledge Point 2**: [[01-04-2-Related Atomic Note]]
-3. **Knowledge Point 3**: [[01-04-3-Related Atomic Note]]
+#### MOC Index System
+Three-tier hierarchy:
+- Course level: 张宇30讲-主索引.md
+- Chapter level: e.g., 01-函数极限与连续性-MOC.md
+- Lecture level: e.g., 01-04-函数极限与性质-MOC.md
 
-## 📊 Knowledge Graph Layout
-[Visualization layout description]
+#### Learning Analytics
+Automated statistics using Dataview:
+- Learning progress tracking by difficulty and mastery level
+- Review frequency analysis with spaced repetition
+- Study time analytics and trends
+- Knowledge connection mapping
 
-## 🔗 Knowledge Connections
-- **Prerequisites**: [[Prerequisite knowledge links]]
-- **Applications**: [[Application knowledge links]]
-- **Related Concepts**: [[Related concept links]]
+### Key Technologies
+
+#### Dataview Queries
+The system relies heavily on Dataview for automation:
+```dataview
+TABLE WITHOUT ID
+  file.link as "📝 原子笔记",
+  topic as "📚 主题",
+  difficulty as "🎯 难度"
+FROM "02_原子笔记"
+WHERE 
+  note_id = "01-04-*" OR
+  (chapter = "01" AND lecture = "04")
+SORT note_id ASC
 ```
 
-## 📝 Content Processing Workflow
+#### Bidirectional Linking
+Automatic connection system using:
+- `[[concept]]` syntax for manual links
+- Dataview queries for automated related content discovery
+- Categorized connections: prerequisite, application, related concepts
 
-### When user provides Markdown course manuscript:
-1. **Update this file**: Record lecture information in corresponding table
-2. **Analyze heading structure**: 
-   - Scan all heading levels in the document
-   - Identify the base heading level (could be #, ##, or ###)
-   - Determine relative hierarchy for mapping
-3. **Parse Markdown structure**: Extract content based on relative heading levels
-4. **Normalize content organization**: 
-   - Map base level → Canvas/Lecture title
-   - Map base+1 level → Main topic categories
-   - Map base+2 level → Individual atomic notes
-   - Preserve all original formatting and content
-5. **Create atomic notes**: Generate numbered atomic notes using the normalized structure
-6. **Generate Canvas**: Create dedicated Canvas file with knowledge point mapping
-7. **Establish links**: Create bidirectional links between related atomic notes
-8. **Update MOC**: Add new content to corresponding chapter MOC
+#### Canvas JSON Structure
+Standardized node types:
+- `text` nodes for descriptions and groups
+- `file` nodes linking to atomic notes
+- `group` nodes for concept categorization
+- Color coding for difficulty levels and concept types
 
-### File Management Rules
-- **Atomic Notes**: Store in `02_Atomic_Notes/[Category]/` directory
-- **Canvas Files**: Store in `03_Canvas/` directory  
-- **Daily Records**: Store in `05_Daily_Notes/` directory
-- **Review Materials**: Store in `02_Atomic_Notes/Review_Materials/` directory
-- **Study Plans**: Store in `02_Atomic_Notes/Study_Plans/` directory
-- **Templates**: Store in `00_Templates/` directory
-- **MOCs**: Store in `01_MOCs/` directory
+### Naming Conventions
 
-## 🛠️ Automation Script Instructions
+#### Atomic Notes
+Format: `{chapter}-{lecture}-{sequence}-{topic}.md`
+Example: `01-04-1-导数定义.md`
 
-### Batch Creation Commands
-```bash
-# Create atomic notes for new lecture
-touch "02_Atomic_Notes/Calculus/01-04-3-Concept_Name.md"
+#### Canvas Files
+Format: `Canvas_{chapter}_{lecture}_{topic}.canvas`
+Example: `Canvas_01_04_函数极限与性质-增强版.canvas`
 
-# Create canvas file for new lecture
-touch "03_Canvas/Canvas_01_04_Lecture_Topic.md"
+#### MOC Files
+Format: `{chapter}-{lecture}-{topic}-MOC.md`
+Example: `01-04-函数极限与性质-MOC.md`
 
-# Update CLAUDE.md records
-# [Manual update of tables and number lists]
-```
+### Metadata Schema
 
-### Template Application
-- Use templates from `00_Templates/` to create new notes
-- Uniformly use numbered prefixes for filenames
-- Record corresponding lecture information in metadata
-
-## 📊 Statistics
-
-### Overall Progress
-- **Total Lectures**: 16 lectures (8 foundation + 8 formal)
-- **Processed Lectures**: 0 lectures
-- **Created Atomic Notes**: 2
-- **Created Canvas**: 0
-
-### Recent Updates
-- **Last Update**: 2024-09-06
-- **Next Processing**: Waiting for user-provided Markdown course manuscript
-- **Processing Format**: Markdown (.md files only, not PDF)
-
+#### YAML Frontmatter
+```yaml
 ---
-
-**File Maintenance**: Update this file when processing new course manuscripts  
-**Version**: 1.0  
-**Created**: 2024-09-06
-
+date: YYYY-MM-DD
+course: Zhang Yu 30 Lectures
+chapter: NN
+lecture: NN
+topic: [Topic Name]
+difficulty: [初级|中级|高级]
+note_id: NN-NN-N
+type: atomic-note
+tags: [atomic-note, [difficulty], [topic], zhang-yu, chapter-[chapter]]
+mastery_level: [初学|基本理解|完全掌握]
+review_count: N
+study_time: N
+related_lecture: [[Canvas_[chapter]_[lecture]_[topic]]]
 ---
-
-## 📝 Markdown Processing Guidelines
-
-### Supported Markdown Features
-- **Headings**: `#`, `##`, `###` for knowledge hierarchy
-- **Lists**: Bullet points and numbered lists
-- **Code blocks**: For mathematical formulas and code
-- **Tables**: For structured data
-- **Links**: Both external and internal Obsidian links
-- **Bold/Italic**: For emphasis
-- **Blockquotes**: For important notes
-
-### Markdown to Atomic Notes Conversion
-#### Handling Irregular Heading Hierarchies
-Since Markdown headings may be inconsistent (starting with ### instead of #), the system uses:
-
-1. **Heading Level Analysis**: 
-   - Detect the highest level heading used in document
-   - Normalize levels based on relative hierarchy
-   - Map to atomic note structure regardless of absolute level
-
-2. **Relative Hierarchy Mapping**:
-   - **Highest level found** → Lecture/Canvas level
-   - **Second level** → Main topic categories  
-   - **Third level** → Individual atomic notes
-   - **Fourth level+** → Sub-notes or examples
-
-3. **Flexible Conversion Rules**:
-   - Whatever is the main heading (#, ##, or ###) → Canvas file name
-   - One level down → Main topic areas
-   - Two levels down → Individual atomic notes
-   - Code blocks → Formula atomic notes
-   - Lists → Practice atomic notes
-
-### Example Markdown Structures
-
-#### Standard Structure:
-```markdown
-# Lecture 01: Function Limits
-
-## 1.1 Definition of Limits
-The limit of f(x) as x approaches a...
-
-### Key Properties
-- Property 1
-- Property 2
-
-## 1.2 Limit Laws
 ```
 
-#### Irregular Structure (Starting with ###):
-```markdown
-### 第一讲 函数极限
+### Required Obsidian Plugins
 
-#### 1.1 极限的定义
-函数f(x)当x趋近于a时的极限...
+1. **Dataview** - For automated queries and data visualization
+2. **Canvas** - For knowledge graph visualization
+3. **Tasks** - For task management integration
+4. **Templates** - For standardized note creation
 
-##### 关键性质
-- 性质1
-- 性质2
+### Mathematical Formula Formatting
 
-#### 1.2 极限法则
+**All mathematical formulas must follow the format specified in [`obsidian公式.md`](obsidian公式.md):**
+
+#### Inline Formulas
+Use single dollar signs: `$E = mc^2$`
+
+#### Block Formulas  
+Use double dollar signs on separate lines:
+```latex
+$$
+\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+$$
 ```
 
-#### Mixed Structure:
-```markdown
-## 概念定义
+#### Common Examples
+- Exponents: `$x^2 + y_i$`
+- Fractions: `$\frac{a+b}{c}$`
+- Roots: `$\sqrt{x^2 + 1}$`
+- Matrices: `$\begin{pmatrix}1 & 2\\3 & 4\end{pmatrix}$`
+- Sums/Integrals: `$\sum_{i=1}^n i^2$` or `$\int_a^b f(x)\,dx$`
+- Greek letters: `$\alpha + \beta = \gamma$`
+- Piecewise functions: `$f(x) = \begin{cases}x^2, & x \geq 0\\-x, & x < 0\end{cases}$`
 
-### 极限的ε-δ定义
-对于任意ε>0，存在δ>0...
+**Important Notes:**
+- All formulas must use dollar sign delimiters, not standard LaTeX `\(...\)` or `\[...\]`
+- For complex formulas, consider using the Transfer LaTeX from GPT plugin for format conversion
+- For frequent formula input, consider the Latex Suite plugin for shortcuts and autocomplete
 
-#### 应用例子
-例子1：证明lim[x→2] x² = 4
+### Canvas JSON File Format
 
-### 计算方法
-直接代入法、因式分解法...
+**Canvas files must follow the JSON structure specified in [`canvas参考文件.md`](canvas参考文件.md):**
+
+Canvas files use `.canvas` extension with this structure:
+
+```json
+{
+  "nodes": [
+    {
+      "id": "unique-id",
+      "type": "text|file|link|image|group",
+      "text": "content (for text type)",
+      "file": "path/to/file.md (for file/image type)",
+      "url": "https://example.com (for link type)",
+      "x": 100,
+      "y": 100,
+      "width": 250,
+      "height": 150,
+      "color": "1-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-id",
+      "fromNode": "from-node-id",
+      "toNode": "to-node-id", 
+      "fromSide": "top|bottom|left|right",
+      "toSide": "top|bottom|left|right",
+      "label": "connection description"
+    }
+  ]
+}
 ```
 
-### Processing Best Practices
-- **Preserve formatting**: Keep original Markdown structure
-- **Extract metadata**: Lecture number, topic, difficulty
-- **Create links**: Automatically link related concepts
-- **Maintain hierarchy**: Use relative heading levels for organization
-- **Handle irregularities**: Adapt to whatever heading structure is provided
+**Node Types:**
+- `text`: Text content cards
+- `file`: Links to markdown files in the vault
+- `link`: External web links
+- `image`: Image files from the vault
+- `group`: Container nodes for organizing other nodes
 
-### Heading Analysis Algorithm
-1. **Scan all headings**: Find all `#`, `##`, `###`, etc. in document
-2. **Determine base level**: Identify the highest-level heading (minimum # count)
-3. **Normalize hierarchy**: 
-   - Base level → Lecture/Canvas level
-   - Base+1 → Main topics
-   - Base+2 → Atomic notes
-   - Base+3+ → Sub-notes/examples
-4. **Handle edge cases**:
-   - Single level documents: Create artificial hierarchy
-   - Mixed languages: Preserve original, add English translations
-   - Inconsistent formatting: Normalize to consistent structure
+**Edge Properties:**
+- `fromNode`/`toNode`: Node IDs to connect
+- `fromSide`/`toSide`: Connection sides (`top`, `bottom`, `left`, `right`)
+- `label`: Description text for the connection
 
-### Input Requirements
-- **Format**: .md files only
-- **Encoding**: UTF-8
-- **Structure**: Clear heading hierarchy
-- **Content**: Mathematical concepts in LaTeX code blocks
+**Usage:**
+1. Create a text file with the JSON structure
+2. Save with `.canvas` extension
+3. Place in any directory within the Obsidian vault
+4. Open in Obsidian to view and edit the Canvas
+
+### Common Development Tasks
+
+#### Creating New Atomic Notes
+1. Copy from `00_Templates/原子笔记模板-优化版.md`
+2. Fill in YAML metadata with appropriate values
+3. Populate content sections following the standard structure
+4. Establish bidirectional links to related concepts
+5. Update corresponding Canvas and MOC files
+
+#### Updating Canvas Files
+1. Add new file nodes for created atomic notes
+2. Position nodes within appropriate concept groups
+3. Establish connections showing dependencies and relationships
+4. Optimize layout for clarity and visual hierarchy
+
+#### Maintaining MOC Indexes
+1. Update lecture-level MOCs with new atomic notes
+2. Refresh chapter-level MOCs with lecture updates
+3. Ensure learning progress statistics are current
+4. Verify all bidirectional links are functional
+
+### Data Flow Architecture
+
+```
+Learning Activity → Atomic Note Creation → Metadata Tagging
+       ↓
+Bidirectional Linking → Canvas Visualization → MOC Integration
+       ↓
+Daily Recording → Progress Tracking → Review Scheduling
+```
+
+This creates a self-reinforcing knowledge management system where each component enhances the others through automated connections and data flow.

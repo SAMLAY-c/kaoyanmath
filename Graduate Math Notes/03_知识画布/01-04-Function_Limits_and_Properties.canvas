@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"formulas","type":"file","file":"02_Atomic_Notes/公式/01-04-2-导数基本公式.md","x":870,"y":-400,"width":500,"height":600,"color":"3"},
+		{"id":"limit-definition","type":"file","file":"02_Atomic_Notes/高等数学/01-04-1-导数定义.md","x":-480,"y":-300,"width":540,"height":500,"color":"2"},
+		{"id":"one-sided-limits","type":"text","text":"## 单侧极限\n\n### 左极限\nlim[x→a⁻] f(x)\n\n### 右极限\nlim[x→a⁺] f(x)\n\n### 存在性条件\n左极限 = 右极限","x":-480,"y":300,"width":457,"height":400,"color":"2"},
+		{"id":"limit-laws","type":"text","text":"## 极限运算法则\n\n1. 和差法则\n2. 乘积法则\n3. 商法则\n4. 复合函数法则\n5. 夹逼定理","x":307,"y":398,"width":300,"height":202,"color":"3"},
+		{"id":"central-concept","type":"text","text":"# 函数极限与性质\n\n**Chapter 01 - Lecture 04**\n\n## 核心内容\n- 极限的严格定义\n- 单侧极限概念\n- 极限存在性判别\n- 极限运算法则\n- 常见极限计算方法","x":288,"y":-260,"width":340,"height":320,"color":"1"},
+		{"id":"epsilon-delta","type":"text","text":"## ε-δ定义\n\n∀ε>0, ∃δ>0\n\n使得当 0<|x-a|<δ 时\n\n|f(x)-L|<ε","x":998,"y":385,"width":245,"height":215,"color":"4"},
+		{"id":"examples","type":"text","text":"## 典型例题\n\n### 基础计算\nlim[x→2] x² = 4\n\n### 进阶问题\nlim[x→0] sin(x)/x = 1\n\n### 挑战题目\n涉及分段函数的极限","x":840,"y":680,"width":560,"height":460,"color":"6"},
+		{"id":"calculation-methods","type":"text","text":"## 计算方法\n\n### 直接代入法\n### 因式分解法\n### 有理化法\n### 等价无穷小替换","x":320,"y":770,"width":275,"height":280,"color":"5"}
+	],
+	"edges":[
+		{"id":"edge-1","fromNode":"central-concept","fromSide":"left","toNode":"limit-definition","toSide":"right","label":"核心定义"},
+		{"id":"edge-2","fromNode":"central-concept","fromSide":"right","toNode":"formulas","toSide":"left","label":"常用公式"},
+		{"id":"edge-3","fromNode":"limit-definition","fromSide":"bottom","toNode":"one-sided-limits","toSide":"top","label":"深入理解"},
+		{"id":"edge-4","fromNode":"formulas","fromSide":"bottom","toNode":"epsilon-delta","toSide":"top","label":"严格定义"},
+		{"id":"edge-5","fromNode":"one-sided-limits","fromSide":"right","toNode":"limit-laws","toSide":"left","label":"理论基础"},
+		{"id":"edge-6","fromNode":"epsilon-delta","fromSide":"left","toNode":"limit-laws","toSide":"right","label":"理论支撑"},
+		{"id":"edge-7","fromNode":"limit-laws","fromSide":"bottom","toNode":"calculation-methods","toSide":"top","label":"应用方法"},
+		{"id":"edge-8","fromNode":"calculation-methods","fromSide":"right","toNode":"examples","toSide":"left","label":"实践应用"},
+		{"id":"edge-9","fromNode":"central-concept","fromSide":"bottom","toNode":"limit-laws","toSide":"top","label":"核心理论"}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"core-concepts","type":"group","text":"## 📊 核心概念群组\n\n### 严格定义\n- ε-δ定义\n- 极限的几何意义\n- 极限的唯一性\n\n### 存在性\n- 极限存在准则\n- 左右极限\n- 无穷极限","x":-200,"y":-100,"width":280,"height":200,"color":"2","background":"rgba(255,235,235,0.8)"},
+		{"id":"theoretical-foundation","type":"group","text":"## 📐 理论基础群组\n\n### 运算法则\n- 四则运算\n- 复合函数\n- 夹逼定理\n\n### 重要公式\n- 基本导数公式\n- 常用极限公式","x":400,"y":50,"width":280,"height":200,"color":"3","background":"rgba(235,245,255,0.8)"},
+		{"id":"calculation-methods","type":"group","text":"## 🛠️ 计算方法群组\n\n### 基础方法\n- 直接代入法\n- 因式分解法\n- 有理化法\n\n### 进阶技巧\n- 等价无穷小替换\n- 洛必达法则\n- 泰勒展开","x":1000,"y":-100,"width":280,"height":200,"color":"4","background":"rgba(235,255,235,0.8)"},
+		{"id":"direct-substitution","type":"file","file":"02_Atomic_Notes/高等数学/01-04-8-直接代入法.md","x":1150,"y":100,"width":200,"height":120,"color":"4"},
+		{"id":"factorization","type":"file","file":"02_Atomic_Notes/高等数学/01-04-9-因式分解法.md","x":1150,"y":250,"width":200,"height":120,"color":"4"},
+		{"id":"advanced-problems","type":"file","file":"02_Atomic_Notes/高等数学/01-04-7-高级极限问题.md","x":1150,"y":400,"width":200,"height":120,"color":"4"},
+		{"id":"applications","type":"text","text":"## 📈 后续应用\n\n### 直接应用\n- 函数连续性\n- 导数定义\n- 积分概念\n\n### 拓展应用\n- 级数收敛性\n- 微分方程\n- 多元函数极限","x":1000,"y":450,"width":250,"height":150,"color":"6"},
+		{"id":"basic-calculation","type":"file","file":"02_Atomic_Notes/高等数学/01-04-6-基本极限计算.md","x":1050,"y":-260,"width":200,"height":120,"color":"4"},
+		{"id":"central-concept","type":"text","text":"# 🎯 01-04-函数极限与性质\n\n**第1讲 - 第4讲**\n\n## 📚 核心内容\n- 函数极限的严格定义\n- 极限的性质和运算法则\n- 极限计算的基本方法\n- 极限与连续性的关系\n\n## 🎯 学习目标\n- 理解ε-δ定义\n- 掌握极限运算法则\n- 学会基本计算方法\n- 建立几何直观","x":230,"y":-560,"width":370,"height":460,"color":"1"},
+		{"id":"prerequisites","type":"text","text":"## 🔄 前置知识\n\n### 必备基础\n- 函数概念\n- 数列极限\n- 基本代数运算\n\n### 相关概念\n- 连续性\n- 导数概念\n- 无穷小量","x":-915,"y":-407,"width":190,"height":375,"color":"5"},
+		{"id":"derivative-definition","type":"file","file":"02_Atomic_Notes/高等数学/01-04-1-导数定义.md","x":-580,"y":-920,"width":440,"height":420,"color":"2"},
+		{"id":"limit-existence","type":"file","file":"02_Atomic_Notes/高等数学/01-04-3-极限存在准则.md","x":-1200,"y":370,"width":570,"height":580,"color":"2"},
+		{"id":"epsilon-delta","type":"file","file":"02_Atomic_Notes/高等数学/01-04-4-ε-δ定义.md","x":-440,"y":480,"width":630,"height":520,"color":"2"},
+		{"id":"learning-resources","type":"text","text":"## 📚 学习资源\n\n### 原子笔记\n- 9个核心概念笔记\n- 公式总结\n- 练习题集\n\n### 管理工具\n- MOC主题索引\n- 复习追踪系统\n- 学习统计仪表板","x":240,"y":-1980,"width":280,"height":370,"color":"7"},
+		{"id":"limit-laws","type":"file","file":"02_Atomic_Notes/高等数学/01-04-5-极限运算法则.md","x":500,"y":520,"width":400,"height":200,"color":"3"},
+		{"id":"formulas","type":"file","file":"02_Atomic_Notes/公式/01-04-2-导数基本公式.md","x":600,"y":130,"width":400,"height":320,"color":"3"}
+	],
+	"edges":[
+		{"id":"edge-1","fromNode":"central-concept","fromSide":"left","toNode":"core-concepts","toSide":"right","color":"2","label":"核心概念"},
+		{"id":"edge-2","fromNode":"central-concept","fromSide":"right","toNode":"theoretical-foundation","toSide":"left","color":"3","label":"理论基础"},
+		{"id":"edge-3","fromNode":"central-concept","fromSide":"bottom","toNode":"calculation-methods","toSide":"top","color":"4","label":"计算方法"},
+		{"id":"edge-4","fromNode":"core-concepts","fromSide":"left","toNode":"derivative-definition","toSide":"right","label":"导数定义"},
+		{"id":"edge-5","fromNode":"core-concepts","fromSide":"bottom","toNode":"limit-existence","toSide":"top","label":"存在准则"},
+		{"id":"edge-6","fromNode":"core-concepts","fromSide":"bottom","toNode":"epsilon-delta","toSide":"top","label":"ε-δ定义"},
+		{"id":"edge-7","fromNode":"theoretical-foundation","fromSide":"right","toNode":"formulas","toSide":"top","label":"基本公式"},
+		{"id":"edge-8","fromNode":"theoretical-foundation","fromSide":"bottom","toNode":"limit-laws","toSide":"top","label":"运算法则"},
+		{"id":"edge-9","fromNode":"calculation-methods","fromSide":"left","toNode":"basic-calculation","toSide":"right","label":"基础计算"},
+		{"id":"edge-10","fromNode":"calculation-methods","fromSide":"left","toNode":"direct-substitution","toSide":"right","label":"直接代入"},
+		{"id":"edge-11","fromNode":"calculation-methods","fromSide":"left","toNode":"factorization","toSide":"right","label":"因式分解"},
+		{"id":"edge-12","fromNode":"calculation-methods","fromSide":"left","toNode":"advanced-problems","toSide":"right","label":"高级问题"},
+		{"id":"edge-13","fromNode":"derivative-definition","fromSide":"left","toNode":"prerequisites","toSide":"top","color":"5","label":"前置依赖"},
+		{"id":"edge-14","fromNode":"advanced-problems","fromSide":"bottom","toNode":"applications","toSide":"top","color":"6","label":"后续应用"},
+		{"id":"edge-15","fromNode":"central-concept","fromSide":"bottom","toNode":"learning-resources","toSide":"top","color":"7","label":"学习资源"},
+		{"id":"edge-16","fromNode":"limit-existence","fromSide":"right","toNode":"epsilon-delta","toSide":"left","label":"严格定义"},
+		{"id":"edge-17","fromNode":"formulas","fromSide":"bottom","toNode":"limit-laws","toSide":"top","label":"理论基础"},
+		{"id":"edge-18","fromNode":"basic-calculation","fromSide":"bottom","toNode":"direct-substitution","toSide":"top","label":"方法进阶"},
+		{"id":"edge-19","fromNode":"direct-substitution","fromSide":"bottom","toNode":"factorization","toSide":"top","label":"方法进阶"},
+		{"id":"edge-20","fromNode":"factorization","fromSide":"bottom","toNode":"advanced-problems","toSide":"top","label":"综合应用"}
+	]
+}
